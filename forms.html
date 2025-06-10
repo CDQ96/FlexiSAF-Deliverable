@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment</title>
+  <link rel="stylesheet" href="Forms.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header style="text-align: center; margin-bottom: 30px;">
+  <img src="C:\Users\IT-Administrator\Desktop\Deepseek Trial\A-Z Cars & Co. Logo.jpg" alt="A-Z Cars & Co. Logo" style="max-height: 80px; margin-bottom: 10px;">
+  <h1 style="color: #5D4037; font-family: 'Poppins', Arial, sans-serif; margin: 0;">A-Z Cars & Co.</h1>
+</header>
+
+  <form onsubmit="alert('We will be awaiting your arrival!'); return false;">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="appointment-date">Preferred Appointment Date:</label>
+    <input type="date" id="appointment-date" name="appointment-date" required>
+
+    <label for="appointment-time">Preferred Time:</label>
+    <input type="time" id="appointment-time" name="appointment-time" required>
+
+    <label for="preferred-color">Preferred Car Color:</label>
+    <input type="text" id="preferred-color" name="preferred-color" placeholder="e.g., Red, Black, White">
+
+    <label for="budget">Expected Budget ($):</label>
+    <input type="number" id="budget" name="budget" placeholder="e.g. 15000" min="1000" step="500">
+
+    <!-- Transmission Type -->
+<label>Transmission Type:</label>
+<div class="radio-group">
+  <div class="radio-option">
+    <input type="radio" id="transmission-manual" name="transmission" value="Manual" required>
+    <label for="transmission-manual">Manual</label>
+  </div>
+  <div class="radio-option">
+    <input type="radio" id="transmission-automatic" name="transmission" value="Automatic">
+    <label for="transmission-automatic">Automatic</label>
+  </div>
+</div>
+
+<!-- Drivetrain Type -->
+<label>Drivetrain Type:</label>
+<div class="radio-group">
+  <div class="radio-option">
+    <input type="radio" id="drivetrain-ice" name="drivetrain" value="I.C.E." required>
+    <label for="drivetrain-ice">I.C.E.</label>
+  </div>
+  <div class="radio-option">
+    <input type="radio" id="drivetrain-hybrid" name="drivetrain" value="Hybrid">
+    <label for="drivetrain-hybrid">Hybrid</label>
+  </div>
+  <div class="radio-option">
+    <input type="radio" id="drivetrain-electric" name="drivetrain" value="Electric">
+    <label for="drivetrain-electric">Electric</label>
+  </div>
+</div>
+
+
+    <label for="license-upload">Upload Driver’s License:</label>
+    <input type="file" id="license-upload" name="license-upload" accept="image/*,.pdf">
+
+    <label for="car-interest">Car Type of Interest:</label>
+    <select id="car-interest" name="car-interest" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #D7CCC8; border-radius: 4px; background-color: #EFEBE9;">
+      <option value="">-- Select a car type --</option>
+      <option value="Sedan">Sedan</option>
+      <option value="SUV">SUV</option>
+      <option value="Truck">Truck</option>
+      <option value="Electric">Electric</option>
+      <option value="Hatchback">Hatchback</option>
+      <option value="Bus">Bus</option>
+      <option value="Other">Other</option>
+    </select>
+
+
+    <div class="submit-button-wrapper">
+      <button type="reset" class="styled-button" style="background-color: #BCAAA4;"><i class="fas fa-rotate-left"></i> Reset </button>
+
+      <button class="styled-button"><i class="fas fa-paper-plane"></i> Submit</button>
+    </div>
+  </form>
+</body>
+</html>
